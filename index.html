@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #039d55;
+            color: #ffffff;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 150px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #039d55;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input[type="text"] {
+            padding: 15px;
+            width: 80%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Student Result Portal</h1>
+        <p>Please enter your Admission Number or Name to view your result:</p>
+        <form onsubmit="return false;">
+            <input type="text" id="identifier" placeholder="Admission Number or Name">
+            <br>
+            <br>
+            <button onclick="submitForm()">Search</button>
+        </form>
+    </div>
+    <script>
+        function submitForm() {
+            var identifier = document.getElementById('identifier').value;
+            if (identifier === '2218689' || identifier.toLowerCase() === 'rekik') {
+                window.location.href = "result.html";
+            } else {
+                alert("No matching records found. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

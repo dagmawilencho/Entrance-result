@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #039d55;
+            color: #ffffff;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #000000;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #039d55;
+        }
+        th, td {
+            color: #000000;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Result</h1>
+        <p>Result Owner: REKIK ASHENAFI TURUFI</p>
+        <p>Admission Number: 2218689</p>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>Aptitude</td>
+                <td>87</td>
+            </tr>
+            <tr>
+                <td>Civics</td>
+                <td>93</td>
+            </tr>
+            <tr>
+                <td>Biology</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Mathematics</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td><strong>Total Result</strong></td>
+                <td><strong id="totalResult"></strong></td>
+            </tr>
+        </table>
+        <button onclick="printResult()">Print Result</button>
+    </div>
+    <script>
+        function printResult() {
+            window.print();
+        }
+
+        // Calculating the total result
+        const results = [100, 88, 87, 93, 94, 95, 88];
+        const totalResult = results.reduce((a, b) => a + b, 0);
+        document.getElementById('totalResult').innerText = totalResult;
+    </script>
+</body>
+</html>
